@@ -8,12 +8,18 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + '_1553928314434_9544';
 
   // add your egg config in here
-  config.middleware = [];
+  config.middleware = ['authentication'];
 
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
   };
+
+  //acl
+  config.acl = {
+    prefix: 'demo_',
+    whiteUrlList: []
+  }
 
   // the return config will combines to EggAppConfig
   return {

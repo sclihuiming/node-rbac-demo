@@ -20,7 +20,7 @@ export interface IGroupModel extends IGroup, Document {
 }
 
 // 定义Schema实例
-export const userSchema: Schema = new Schema({
+export const groupSchema: Schema = new Schema({
   pk: { type: String },//资源组唯一id
   name: { type: String },//资源组名称
   resources: { type: Array },//资源id数组, 对应cms_resource 表的id
@@ -30,11 +30,11 @@ export const userSchema: Schema = new Schema({
   ct: { type: Number, default: moment().second() }
 });
 
-userSchema.index({ username: 1 }, { unique: true });
+groupSchema.index({ pk: 1 }, { unique: true });
 
 export default (): Model<IGroupModel> => {
 
-  return model<IGroupModel>('User', userSchema);
+  return model<IGroupModel>('Group', groupSchema);
 }
 
 

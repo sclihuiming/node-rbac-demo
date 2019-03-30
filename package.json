@@ -25,11 +25,13 @@
     "acl": "^0.4.11",
     "egg": "^2.6.1",
     "egg-mongoose": "^3.1.1",
+    "egg-redis": "^2.3.0",
     "egg-scripts": "^2.6.0",
+    "lodash": "^4.17.11",
     "moment": "^2.24.0"
   },
   "devDependencies": {
-    "@types/acl": "^0.4.36",
+    "@types/lodash": "^4.14.123",
     "@types/mocha": "^2.2.40",
     "@types/mongoose": "^5.3.24",
     "@types/node": "^7.0.12",
