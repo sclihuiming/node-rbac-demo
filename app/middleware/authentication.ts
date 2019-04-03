@@ -8,7 +8,7 @@ export default function authenticationMiddleware(): any {
       let username: string = ctx.request.body.operationUserName;
       let path: string = ctx.path;
       let method: string = ctx.method.toLowerCase();
-      ctx.logger.error('method', method);
+      ctx.logger.info('auth method', method);
       if (method === 'get' || includes(ctx.app.config.acl.whiteUrlList, path)) {//白名单都是可以访问的，get请求可以通过
         await next();
       } else {
