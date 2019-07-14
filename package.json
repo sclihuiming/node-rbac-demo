@@ -27,7 +27,7 @@
     "egg-mongoose": "^3.1.1",
     "egg-redis": "^2.3.0",
     "egg-scripts": "^2.6.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "moment": "^2.24.0"
   },
   "devDependencies": {
